@@ -9,11 +9,13 @@ get '/secret' do
   "This is a secret page that belongs to Ed!"
 end
 
-get '/cat' do
-  erb :index,:locals => {:name => ["Amigo", "Oscar", "Viking"].sample}
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb :index 
 end
 
-
-
-# locals
-# List of locals passed to the document. Handy with partials. Example: erb "<%= foo %>", :locals => {:foo => "bar"}
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb :index
+end
