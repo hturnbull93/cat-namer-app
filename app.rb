@@ -10,11 +10,10 @@ get '/secret' do
 end
 
 get '/cat' do
-  "<style>
-    img {
-      border: dashed red 2px;
-    }
-  </style>
-  <img src='http://bit.ly/1eze8aE'>
-  <img src='https://images.unsplash.com/photo-1519458524098-335b2a5747b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'>"
+  erb :index,:locals => {:name => ["Amigo", "Oscar", "Viking"].sample}
 end
+
+
+
+# locals
+# List of locals passed to the document. Handy with partials. Example: erb "<%= foo %>", :locals => {:foo => "bar"}
