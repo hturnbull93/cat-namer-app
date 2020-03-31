@@ -1,3 +1,3 @@
-# Battles
+# Cat Namer App
 
-A webapp to play battles.
+A webapp to name a cat!
