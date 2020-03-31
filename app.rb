@@ -11,7 +11,7 @@ end
 
 get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
-  erb :index 
+  erb :index
 end
 
 get '/named-cat' do
