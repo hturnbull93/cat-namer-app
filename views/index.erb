@@ -5,6 +5,15 @@
 </style>
 
 <div>
+  <% if !@name %>
+  <form action="/named-cat">
+    <label for="cat_name">Name your cat</label>
+    <input type="text" name="cat_name" id="name">
+    <input type="submit" value="Submit">
+  </form>
+  <% end %>
+  <% if @name %>
   <h1>My name is <%= @name %></h1>
   <img src='http://bit.ly/1eze8aE'>
+  <% end %>
 </div>
